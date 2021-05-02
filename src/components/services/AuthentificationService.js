@@ -1,13 +1,8 @@
 import axios from "axios";
 
-/**
- * @Copyright by https://loizenai.com
- *        youtube loizenai
- */
-
 class AuthentificationService {
   signin = (cin, password) => {
-      return axios.post("http://localhost:8080/api/auth/signin", {cin, password})
+      return axios.post("http://localhost:8081/api/auth/signin", {cin, password})
         .then(response => {
           if (response.data.accessToken) {
             localStorage.setItem("user", JSON.stringify(response.data));
@@ -25,7 +20,7 @@ class AuthentificationService {
   }
 
   register = async(nom, prenom, cin, email, password,age,ville,adresse,sexe) => {
-    return axios.post("http://localhost:8080/api/auth/signup", {
+    return axios.post("http://localhost:8081/api/auth/signup", {
       nom,
       prenom,
       cin,

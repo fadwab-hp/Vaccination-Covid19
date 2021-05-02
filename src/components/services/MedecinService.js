@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const MEDECIN_API_BASE_URL = "http://localhost:8080/api/auth/Medecins"
+const MEDECIN_API_BASE_URL = "http://localhost:8081/api/auth/Medecins"
 
 class MedecinService {
 

@@ -14,15 +14,15 @@ axios.interceptors.request.use( config => {
 
 class BackendService {
   async getUserBoard() {
-    return await axios.get("http://localhost:8080/api/test/user");
+    return await axios.get("http://localhost:8081/api/test/user");
   }
 
   async getPmBoard() {
-    return await axios.get("http://localhost:8080/api/test/pm");
+    return await axios.get("http://localhost:8081/api/test/pm");
   }
 
   async getAdminBoard() {
-    return await axios.get("http://localhost:8080/api/test/admin");
+    return await axios.get("http://localhost:8081/api/test/admin");
   }
 }
 

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const PATIENT_API_URL = 'http://localhost:8080/api/auth'
+const PATIENT_API_URL = 'http://localhost:8081/api/auth'
 const MEDECIN_API_URL = `${PATIENT_API_URL}/findAllPatients`
 
 class PatientDataService {
