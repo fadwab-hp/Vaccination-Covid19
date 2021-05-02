@@ -36,6 +36,11 @@ class AuthentificationService {
   getCurrentUser() {
     return JSON.parse(localStorage.getItem('user'));;
   }
+  getPatient(cin){
+    
+    return axios.get("http://localhost:8081/api/auth/details/"+cin);
+}
+
 }
 
 export default new AuthentificationService();
