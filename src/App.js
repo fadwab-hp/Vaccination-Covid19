@@ -30,6 +30,7 @@ class App extends Component {
             <br></br>
             <div className ="container">
               <switch>
+
               <Route path="/Accueil" component={Accueil}></Route>
               <Route path="/patients" component = {ListPatients} ></Route>
               <Route path="/add-patient" component = {CreatePatientComponent} ></Route>

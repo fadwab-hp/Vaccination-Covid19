@@ -1,36 +1,36 @@
 import React, { Component } from 'react';
-
-import Royaume from './Royaume.jpeg'
-
+import Royaume from './Royaume.jpeg';
 
 class HeaderComponent extends Component {
-    
+
+    constructor(props){
+        super(props)
+        this.state={
+            
+        }
+    }
     render() {
         return (
             <div>
-            <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-             <div className="container">
-               <h3 className="couleur">Vaccination Covid19</h3>
-               <img src={Royaume} alt="covid"/>
-             </div>
-             <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul className="navbar-nav ml-auto">
+                <header>
+                
+                <div class="header">
+                    <img src={Royaume} width="650" height="100" alt="Hello" ></img>
+                    <a href="/Accueil" class="logo md-3">Vaccination COVID19</a>
+                    
+                    <div class="header-right">
+                        
+                        <a href="#contact">Informations sur le vaccin</a>
+                        <a href="#about">F.A.Q</a>
+                    </div>
+                
+                 </div>
+                 
+            </header>
             
-                <li className="nav-item">
-                <p className="couleur">Je m'informe sur le vaccin</p>
-              
-               </li>
-                   <li className="nav-item"><p className="couleur">FAQ</p>
-                  </li>
-            </ul>
-          
-           </div>
-            </nav>
             </div>
         );
     }
 }
 
-
-
-export default HeaderComponent
+export default HeaderComponent;
