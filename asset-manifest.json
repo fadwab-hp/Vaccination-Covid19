@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Vaccination-Covid19/static/css/main.0d5c392c.chunk.css",
+    "main.js": "/Vaccination-Covid19/static/js/main.1316dd45.chunk.js",
+    "main.js.map": "/Vaccination-Covid19/static/js/main.1316dd45.chunk.js.map",
+    "runtime-main.js": "/Vaccination-Covid19/static/js/runtime-main.d90961cd.js",
+    "runtime-main.js.map": "/Vaccination-Covid19/static/js/runtime-main.d90961cd.js.map",
+    "static/js/2.51b3c7a2.chunk.js": "/Vaccination-Covid19/static/js/2.51b3c7a2.chunk.js",
+    "static/js/2.51b3c7a2.chunk.js.map": "/Vaccination-Covid19/static/js/2.51b3c7a2.chunk.js.map",
+    "static/js/3.11e18ac6.chunk.js": "/Vaccination-Covid19/static/js/3.11e18ac6.chunk.js",
+    "static/js/3.11e18ac6.chunk.js.map": "/Vaccination-Covid19/static/js/3.11e18ac6.chunk.js.map",
+    "index.html": "/Vaccination-Covid19/index.html",
+    "static/css/main.0d5c392c.chunk.css.map": "/Vaccination-Covid19/static/css/main.0d5c392c.chunk.css.map",
+    "static/js/2.51b3c7a2.chunk.js.LICENSE.txt": "/Vaccination-Covid19/static/js/2.51b3c7a2.chunk.js.LICENSE.txt",
+    "static/media/Royaume.873c964c.jpeg": "/Vaccination-Covid19/static/media/Royaume.873c964c.jpeg",
+    "static/media/App.css": "/Vaccination-Covid19/static/media/aceuil_princ.790e5d99.jpeg",
+    "static/media/docteur.07d1b7c1.jpg": "/Vaccination-Covid19/static/media/docteur.07d1b7c1.jpg",
+    "static/media/patient1.78a507ad.png": "/Vaccination-Covid19/static/media/patient1.78a507ad.png",
+    "static/media/statistique.728d293e.png": "/Vaccination-Covid19/static/media/statistique.728d293e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d90961cd.js",
+    "static/js/2.51b3c7a2.chunk.js",
+    "static/css/main.0d5c392c.chunk.css",
+    "static/js/main.1316dd45.chunk.js"
+  ]
+}
