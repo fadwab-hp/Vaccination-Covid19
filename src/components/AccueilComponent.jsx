@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import docteur from '../components/docteur.jpg';
 import patient1 from '../components/patient1.png';
 import statistique from '../components/statistique.png';
+import rdv from '../components/rdv.jpg';
 import { withRouter } from 'react-router-dom'; 
 import {  Link } from "react-router-dom";
 
@@ -15,10 +16,7 @@ class AcceuilComponent extends Component {
             
             <div >
               <br></br>
-       <br></br>
-       <br></br>
-       <br></br>
-       <br></br>  
+        
             <div>
            
                 <section id="services" class="services ">
@@ -52,6 +50,14 @@ class AcceuilComponent extends Component {
       <div class="pic"><img src={statistique} class="img-fluid" alt=""></img></div>
       <h4 className="couleur"><a href="">Statistiques et documentation</a></h4>
       <p className="couleur">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+    <div class="icon-box">
+        <div class="pic"><img src={rdv} class="img-fluid" alt=""></img></div>
+      <h4 className="couleur"><a href="">Rendez-vous</a></h4>
+      <p className="couleur">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
     </div>
   </div>
 
