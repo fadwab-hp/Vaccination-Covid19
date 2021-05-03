@@ -21,7 +21,7 @@ public class DeclarationController {
 	public String savePatient(@RequestBody Declaration declarat) {
 		
 	      declaration.save(declarat);
-		return "added patient with name: "+declarat.getNom();
+		return "added patient with name: "+declarat.getCin();
 		
 	}
 }

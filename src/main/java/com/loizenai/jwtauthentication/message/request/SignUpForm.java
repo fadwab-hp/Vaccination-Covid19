@@ -4,7 +4,6 @@ import java.util.Set;
 
 import javax.validation.constraints.*;
 
-import com.loizenai.jwtauthentication.model.Patient_Profile;
 
 public class SignUpForm {
     @NotBlank
@@ -25,7 +24,6 @@ public class SignUpForm {
     private String email;
     
     private Set<String> role;
-    private Patient_Profile patientprofile;
     @NotBlank
     @Size(min = 6, max = 40)
     private String password;
@@ -117,12 +115,6 @@ public class SignUpForm {
     	this.role = role;
     }
 
-	public Patient_Profile getPatientprofile() {
-		return patientprofile;
-	}
-
-	public void setPatientprofile(Patient_Profile patientprofile) {
-		this.patientprofile = patientprofile;
-	}
+	
     
 }

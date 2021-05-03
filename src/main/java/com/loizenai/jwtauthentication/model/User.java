@@ -69,9 +69,8 @@ public class User{
     @Size(min=6, max = 100)
     private String password;
     
-    @OneToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
-    @JoinColumn(name="patient_id")
-    private Patient_Profile patientprofile;
+    
+ 
     
     
     
@@ -85,7 +84,7 @@ public class User{
     public User() {}
 
     public User(String firstname, String lastname, 
-    				String cin, String email, String password, int age,String ville,String adresse, String sexe,Patient_Profile patientprofile) {
+    				String cin, String email, String password, int age,String ville,String adresse, String sexe) {
         this.nom = firstname;
         this.prenom = lastname;
         this.cin = cin;
@@ -95,7 +94,7 @@ public class User{
         this.ville=ville;
         this.age=age;
         this.sexe=sexe;
-        this.patientprofile=patientprofile;
+       
     }
 
     public Long getId() {
@@ -179,11 +178,5 @@ public class User{
         this.roles = roles;
     }
 
-	public Patient_Profile getPatientprofile() {
-		return patientprofile;
-	}
-
-	public void setPatientprofile(Patient_Profile patientprofile) {
-		this.patientprofile = patientprofile;
-	}
+	
 }

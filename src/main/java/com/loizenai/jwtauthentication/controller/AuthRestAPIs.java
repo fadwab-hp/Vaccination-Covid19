@@ -24,11 +24,9 @@ import com.loizenai.jwtauthentication.message.request.LoginForm;
 import com.loizenai.jwtauthentication.message.request.SignUpForm;
 import com.loizenai.jwtauthentication.message.response.JwtResponse;
 import com.loizenai.jwtauthentication.message.response.ResponseMessage;
-import com.loizenai.jwtauthentication.model.Patient_Profile;
 import com.loizenai.jwtauthentication.model.Role;
 import com.loizenai.jwtauthentication.model.RoleName;
 import com.loizenai.jwtauthentication.model.User;
-import com.loizenai.jwtauthentication.repository.PatientProfileRepository;
 import com.loizenai.jwtauthentication.repository.RoleRepository;
 import com.loizenai.jwtauthentication.repository.UserRepository;
 import com.loizenai.jwtauthentication.security.jwt.JwtProvider;
@@ -44,8 +42,6 @@ public class AuthRestAPIs {
 	@Autowired
 	UserRepository userRepository;
 	
-	@Autowired
-	private PatientProfileRepository patientProfileRepository;
 	
 	@Autowired
 	RoleRepository roleRepository;
@@ -85,7 +81,7 @@ public class AuthRestAPIs {
 		// Creating user's account
 		User user = new User(signUpRequest.getNom(), signUpRequest.getPrenom(), 
 								signUpRequest.getCin(), signUpRequest.getEmail(),
-				encoder.encode(signUpRequest.getPassword()),signUpRequest.getAge(),signUpRequest.getVille(),signUpRequest.getAdresse(),signUpRequest.getSexe(),null);
+				encoder.encode(signUpRequest.getPassword()),signUpRequest.getAge(),signUpRequest.getVille(),signUpRequest.getAdresse(),signUpRequest.getSexe());
 
 		Set<Role> roles = new HashSet<>(); 
 		if(signUpRequest.getRole() != null) {
@@ -117,17 +113,7 @@ public class AuthRestAPIs {
 					.orElseThrow(() -> new RuntimeException("Fail! -> Cause: User Role not find."));
 			roles.add(userRole);			
 		}
-		Patient_Profile patientprofile=new Patient_Profile();
-		patientprofile.setAtcds(null);
-		patientprofile.setEtatDeVaccination(null);
-		patientprofile.setDateDePremereDose(null);
-		patientprofile.setDateDeuxiemeeDose(null);
-		patientprofile.setEffetsInds(null);
-		patientprofile.setObservations(null);
-		
-		user.setPatientprofile(patientprofile);
-		patientprofile.setUser(user);
-		
+	
 		user.setRoles(roles);
 		userRepository.save(user);
 

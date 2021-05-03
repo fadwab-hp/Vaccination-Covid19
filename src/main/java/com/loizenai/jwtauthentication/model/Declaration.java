@@ -1,7 +1,9 @@
 package com.loizenai.jwtauthentication.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +14,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "declarations", uniqueConstraints = {
+@Table(name = "Declaration", uniqueConstraints = {
         @UniqueConstraint(columnNames = {
             "cin"
         })
@@ -22,17 +24,12 @@ public class Declaration {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
-    @Size(min=3, max = 50)
-    private String nom;
-    
-    @NotBlank
-    @Size(min=3, max = 50)
-    private String prenom;
+   
 
     @NotBlank
     @Size(min=3, max = 50)
-    private String cin;
+     private String cin;
+   
      private String effets;
      private String autres;
      
@@ -41,13 +38,11 @@ public class Declaration {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Declaration(Long id,  String nom,
-			String prenom,String cin,
+	public Declaration(Long id,String cin,
 			String effets, String autres) {
 		
 		this.id = id;
-		this.nom = nom;
-		this.prenom = prenom;
+		
 		this.cin = cin;
 		this.effets = effets;
 		this.autres = autres;
@@ -61,21 +56,7 @@ public class Declaration {
 		this.id = id;
 	}
 
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-	public String getPrenom() {
-		return prenom;
-	}
-
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
+	
 
 	public String getCin() {
 		return cin;
