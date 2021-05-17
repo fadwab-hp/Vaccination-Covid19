@@ -452,7 +452,7 @@ h3 {
   transform: translate(-50%, -50%);
 }
 
-<<<<<<< HEAD
+
 .back{
   background: url('../src/image/aceuil_princ.jpeg');
   background-repeat: no-repeat;
@@ -483,9 +483,8 @@ h3 {
 .card{
   box-shadow: 10px 10px grey;
 }
-=======
+
 
 
 
 @import '~antd/dist/antd.css';
->>>>>>> 9d14e62338e11ec66c1ac37e291aa331602390eb

@@ -18,13 +18,13 @@ import CreatePatientComponent from './components/CreatePatientComponent';
 import FicheComponent from './components/FicheComponent'
 import Accueil from './components/Accueil';
 import Effet from './components/effets_inde';
-<<<<<<< HEAD
-import multi from './components/chahid';
+
+
 import editprofile from'./components/editprofile';
 import vaccin from './components/vaccinadopte'
-=======
+
 import Faq from './components/Faq';
->>>>>>> 9d14e62338e11ec66c1ac37e291aa331602390eb
+
 class App extends Component {
   render() {
     return (
@@ -36,7 +36,7 @@ class App extends Component {
             
             <div className ="container">
               <switch>
-              <Route path="/multi" component={multi}></Route>
+              
               <Route path="/Accueil" component={Accueil}></Route>
               <Route path="/editprofile" component={editprofile}></Route>
               <Route path="/patients" component = {ListPatients} ></Route>
