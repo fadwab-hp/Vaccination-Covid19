@@ -18,7 +18,17 @@ import CreatePatientComponent from './components/CreatePatientComponent';
 import FicheComponent from './components/FicheComponent'
 import Accueil from './components/Accueil';
 import Effet from './components/effets_inde';
+<<<<<<< HEAD
 import MesRendezVous from './components/MesRendezVous'
+=======
+<<<<<<< HEAD
+import multi from './components/chahid';
+import editprofile from'./components/editprofile';
+import vaccin from './components/vaccinadopte'
+=======
+import Faq from './components/Faq';
+>>>>>>> 9d14e62338e11ec66c1ac37e291aa331602390eb
+>>>>>>> be9e7c81c023b63c430040690377d66cb43ca243
 class App extends Component {
   render() {
     return (
@@ -26,18 +36,19 @@ class App extends Component {
       <Router>
             <HeaderComponent/>
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
+             
+            
             <div className ="container">
               <switch>
-
+              <Route path="/multi" component={multi}></Route>
               <Route path="/Accueil" component={Accueil}></Route>
+              <Route path="/editprofile" component={editprofile}></Route>
               <Route path="/patients" component = {ListPatients} ></Route>
               <Route path="/add-patient" component = {CreatePatientComponent} ></Route>
               <Route path="/fiche-patient/:id" component = {FicheComponent} ></Route>
               <Route path="/MesRendezVous" component={MesRendezVous}></Route>
               <Route path="/effet" component={Effet}></Route>
+              <Route path="/vaccin" component={vaccin}></Route>
               <Route path="/SignUp" component={SignUp}></Route>
               <Route path = "/Medecins" component = {ListMedecinComponent} ></Route>
               <Route path = "/addMedecin" component = {CreateMedecinComponent} ></Route>
@@ -46,8 +57,9 @@ class App extends Component {
               <Route path="/Login" component={Login}></Route>
               <Route path="/MyProfile" component={AccueilPatient}></Route>
               <Route path ="/RendezVous" component={RendezvousComponent}></Route>
-              <Route path ="/ListeRendezVous" component={LissteRdvsComponent}></Route>
+              <Route path ="/rdv" component={LissteRdvsComponent}></Route>
               <Route path="/Profile" component={Profile}></Route>
+              <Route path ="/faq" component={Faq}></Route>
               </switch>
             </div>
             <FooterComponent/>

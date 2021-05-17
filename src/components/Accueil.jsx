@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
+import medecinacc from '../components/medecinacc.jpg'
 
 class Accueil extends Component {
 
-    componentDidMount(){
-        document.body.style.background = "white";
-       }
-
+    
     inscrire(){
         this.props.history.push('/SignUp');
 
@@ -15,7 +13,7 @@ class Accueil extends Component {
     }
   render() {
         return (
-            
+           
             <div className="outer">
             <div className="container  back">
               
@@ -41,7 +39,7 @@ class Accueil extends Component {
             </div>
             </div>
             </div> 
-          
+         
         );
     }
 }

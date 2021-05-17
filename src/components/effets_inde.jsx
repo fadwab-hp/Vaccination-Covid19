@@ -7,7 +7,8 @@ import declarationservice from '../components/services/declarationservice';
 import { Form } from 'react-bootstrap';
 import Select from 'react-select';
 import { getElementError } from '@testing-library/dom';
-
+import {Helmet} from "react-helmet";
+import $ from 'jquery';
 class effets extends Component {
 
     constructor(props) {
@@ -17,16 +18,20 @@ class effets extends Component {
           prenom: "",
           cin: "",
           effets: "",
+         
           autre:"",
           user: undefined,
           message: "",
           successful: false,
-
-         
+        
+          selectedOption: null,
+          
           
     };
-   
+
   }
+  
+ 
    
     /*componentDidMount() {
         
@@ -51,11 +56,7 @@ class effets extends Component {
     );
   
   }
-    handleOptionChange = changeEvent => {
-        this.setState({
-            effets: changeEvent.target.value
-        });
-      };
+   
 
      
         Effets = (e) => {
@@ -63,8 +64,7 @@ class effets extends Component {
             
             
              declarationservice.declaration(
-                this.state.nom,
-                this.state.prenom,
+              
                 this.state.cin,
                this.state.effets,
                 this.state.autre,
@@ -90,22 +90,14 @@ class effets extends Component {
         changeautreHandler=(event)=>{
           this.setState({autre:event.target.value})
       }
+
+
+      
   render() {
-    const { plainArray, objectArray, selectedValues } = this.state;
+    
+    const { selectedOption } = this.state;
 
     let alert = "";
-    var effetname=[
-      {value:1,
-      label:"fffffffff"
-    },
-    {value:1,
-      label:"bbbb"
-    },
-    {value:1,
-      label:"ccccc"
-    }
-    ];
-
     if(this.state.message){
       if(this.state.successful){
         alert = (
@@ -173,8 +165,8 @@ class effets extends Component {
                         </div>
                         <div className="col-md-6">
                         <div className="form-group"> <label for="form_need">Selectectioner l'effet*</label> <select id="form_need" name="need" value={this.state.effets} 
-                                        onChange={this.changeeffetHandler} className="form-control" required="required" data-error="Please specify your need.">
-                                                <option  selected disabled>--Selectectioner l'effet--</option>
+                                        onChange={this.changeeffetHandler} className="form-control"  required="required" data-error="Please specify your need.">
+                                                 <option selected>Choisir...</option>
                                                 <option value="fatigue">fatigue</option>
                                                 <option value="maux de tête">maux de tête</option>
                                                 <option value="douleurs articulaires">douleurs articulaires</option>
@@ -187,15 +179,18 @@ class effets extends Component {
                                                 <option value="insomnies">insomnies</option>
                                                 <option>Autre</option>
                                             </select> </div>
+                           
+                       
                                     </div>
+                                  
                     </div>
                    
-                    <div className="form-group"> <label for="msg" className="h6">Message</label>
+                    <div className="form-group"> <label for="msg" className="h6">Autre</label>
                      <textarea name="message" value={this.state.autre} onChange={this.changeautreHandler}  id="msgus" cols="10" rows="5" className="form-control bg-light" placeholder="Message">
                          </textarea> </div>
                          
-                         <Select  isMulti options={effetname}></Select>
-
+                        
+                        
                      
                     <div className="form-group d-flex justify-content-end">
                          <input type="submit" className="btn btn-primary text-white" value="envoyer la delaration"/> </div>
@@ -205,10 +200,9 @@ class effets extends Component {
         </div>
         
     </div>
-
- 
+  
     </div>
-
+ 
 
 
     );
