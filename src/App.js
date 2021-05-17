@@ -20,6 +20,11 @@ import Accueil from './components/Accueil';
 import Effet from './components/effets_inde';
 
 
+
+
+import MesRendezVous from './components/MesRendezVous'
+
+
 import editprofile from'./components/editprofile';
 import vaccin from './components/vaccinadopte'
 
@@ -42,6 +47,7 @@ class App extends Component {
               <Route path="/patients" component = {ListPatients} ></Route>
               <Route path="/add-patient" component = {CreatePatientComponent} ></Route>
               <Route path="/fiche-patient/:id" component = {FicheComponent} ></Route>
+              <Route path="/MesRendezVous" component={MesRendezVous}></Route>
               <Route path="/effet" component={Effet}></Route>
               <Route path="/vaccin" component={vaccin}></Route>
               <Route path="/SignUp" component={SignUp}></Route>

@@ -336,9 +336,6 @@ class SignUp extends Component {
               <p className="forgot-password text-right">
              Already registered <a href=" ">log in?</a>
             </p>
-
-
-
               </form>
               </div>
               </div>
