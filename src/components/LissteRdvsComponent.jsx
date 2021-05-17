@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import RendezVousService from './services/RendezVousService';
+import PatientDataService from '../components/services/PatientDataService';
 
 class LissteRdvsComponent extends Component {
     constructor(props){
         super(props)
 
         this.state={
-            rendez_vous: []
+            patients: []
         }
     }
 
     componentDidMount(){
-        RendezVousService.getRendezvous().then((res)=>{
-            this.setState({rendez_vous: res.data});
+        PatientDataService.retrieveAllPatients().then((res)=>{
+            this.setState({patients: res.data});
         });
     }
 
@@ -24,25 +25,26 @@ class LissteRdvsComponent extends Component {
                     <table className="table table-striped table-borded">
                         <thead>
                             <tr>
-                                <th>date</th>
-                                <th>etat</th>
-                                <th>heure</th>
-                                <th>id_centre</th>
-                                <th>id_medecin</th>
-                                <th>id_patient</th>
+                                <th>CIN</th>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Date 1ére dose</th>
+                                <th>Date 2éme dose</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
-                                this.state.rendez_vous.map(
-                                    rendezvous=>
-                                    <tr key ={rendezvous.id}>
-                                        <td>{rendezvous.date}</td>
-                                        <td>{rendezvous.etat}</td>
-                                        <td>{rendezvous.heure}</td>
-                                        <td>{rendezvous.id_centre}</td>
-                                        <td>{rendezvous.id_medecin}</td>
-                                        <td>{rendezvous.id_patient}</td>
+                                this.state.patients.map(
+                                    patients=>
+                                    <tr key ={patients.id}>
+                                        <td>{patients.cin}</td>
+                                        <td>{patients.nom}</td>
+                                        <td>{patients.prenom}</td>
+                                        <td>{patients.dateDePremereDose}</td>
+                                        <td>{patients.dateDeuxiemeeDose}</td>
+                                        
+                                        
+                                       
                                     </tr>
                                 )
                             }

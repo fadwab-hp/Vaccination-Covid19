@@ -18,9 +18,13 @@ import CreatePatientComponent from './components/CreatePatientComponent';
 import FicheComponent from './components/FicheComponent'
 import Accueil from './components/Accueil';
 import Effet from './components/effets_inde';
+<<<<<<< HEAD
 import multi from './components/chahid';
 import editprofile from'./components/editprofile';
 import vaccin from './components/vaccinadopte'
+=======
+import Faq from './components/Faq';
+>>>>>>> 9d14e62338e11ec66c1ac37e291aa331602390eb
 class App extends Component {
   render() {
     return (
@@ -28,9 +32,8 @@ class App extends Component {
       <Router>
             <HeaderComponent/>
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
+             
+            
             <div className ="container">
               <switch>
               <Route path="/multi" component={multi}></Route>
@@ -49,8 +52,9 @@ class App extends Component {
               <Route path="/Login" component={Login}></Route>
               <Route path="/MyProfile" component={AccueilPatient}></Route>
               <Route path ="/RendezVous" component={RendezvousComponent}></Route>
-              <Route path ="/ListeRendezVous" component={LissteRdvsComponent}></Route>
+              <Route path ="/rdv" component={LissteRdvsComponent}></Route>
               <Route path="/Profile" component={Profile}></Route>
+              <Route path ="/faq" component={Faq}></Route>
               </switch>
             </div>
             <FooterComponent/>

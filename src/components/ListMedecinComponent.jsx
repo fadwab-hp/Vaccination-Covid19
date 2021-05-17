@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MedecinService from '../components/services/MedecinService';
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+
 
 class ListMedecinComponent extends Component {
     constructor(props) {
@@ -15,13 +18,26 @@ class ListMedecinComponent extends Component {
 
     }
     deleteMedecin(id){
-        if(window.confirm('Êtes-vous sûr de vouloir supprimer?'))
-        {
-            MedecinService.deleteMedecin(id).then ( res => {
-                this.setState({medecin: this.state.medecin.filter(medecin => medecin.id !== id)});
-    
-            });
-        }
+        confirmAlert({
+            
+            message: 'Êtes-vous sûr de vouloir supprimer?',
+            buttons: [
+              {
+                label: 'Oui',
+                onClick: () => MedecinService.deleteMedecin(id).then ( res => {
+                    this.setState({medecin: this.state.medecin.filter(medecin => medecin.id !== id)});
+        
+                })
+              },
+              {
+                label: 'Non',
+                onClick: () => this.props.history.push('/Medecins')
+              }
+            ]
+          });
+       
+            
+        
 
     }
 
