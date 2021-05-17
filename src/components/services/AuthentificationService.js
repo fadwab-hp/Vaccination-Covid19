@@ -40,6 +40,10 @@ class AuthentificationService {
     
     return axios.get("http://localhost:8081/api/auth/details/"+cin);
 }
+getPatientDetails(cin){
+    
+  return axios.get("http://localhost:8081/api/auth/detailsPatient/"+cin);
+}
 
 }
 

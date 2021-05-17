@@ -11,7 +11,7 @@ import axios from 'axios';
  }
   handleLogout = () => {
     
-    axios.get("http://localhost:8088/logout") .catch(error => console.log('BAD', error))
+    axios.get("http://localhost:8081/logout") .catch(error => console.log('BAD', error))
     .then(response=>{
       this.props.history.push('/components/login');
       
@@ -46,6 +46,11 @@ import axios from 'axios';
           <br></br>
           <div className="row  text-center">
                 <p> <a href=" ">Cliquez-içi pour :</a>  <strong>𝐃é𝐜𝐥𝐚𝐫𝐞𝐳 𝐮𝐧 𝐞𝐟𝐟𝐞𝐭 𝐢𝐧𝐝é𝐬𝐢𝐫𝐚𝐛𝐥𝐞</strong> </p>
+                <br/><br/>
+          </div>
+          <br></br>
+          <div className="row  text-center">
+                <p> <a href="/MesRendezVous ">Cliquez-içi pour :</a>  <strong>Consulter vos rendez-vous</strong> </p>
                 <br/><br/>
           </div>
           </div>

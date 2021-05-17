@@ -18,6 +18,7 @@ import CreatePatientComponent from './components/CreatePatientComponent';
 import FicheComponent from './components/FicheComponent'
 import Accueil from './components/Accueil';
 import Effet from './components/effets_inde';
+import MesRendezVous from './components/MesRendezVous'
 class App extends Component {
   render() {
     return (
@@ -35,6 +36,7 @@ class App extends Component {
               <Route path="/patients" component = {ListPatients} ></Route>
               <Route path="/add-patient" component = {CreatePatientComponent} ></Route>
               <Route path="/fiche-patient/:id" component = {FicheComponent} ></Route>
+              <Route path="/MesRendezVous" component={MesRendezVous}></Route>
               <Route path="/effet" component={Effet}></Route>
               <Route path="/SignUp" component={SignUp}></Route>
               <Route path = "/Medecins" component = {ListMedecinComponent} ></Route>
