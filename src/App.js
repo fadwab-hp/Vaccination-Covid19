@@ -18,6 +18,7 @@ import CreatePatientComponent from './components/CreatePatientComponent';
 import FicheComponent from './components/FicheComponent'
 import Accueil from './components/Accueil';
 import Effet from './components/effets_inde';
+import Faq from './components/Faq';
 class App extends Component {
   render() {
     return (
@@ -25,9 +26,7 @@ class App extends Component {
       <Router>
             <HeaderComponent/>
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br> 
+             
             
             <div className ="container">
               <switch>
@@ -45,8 +44,9 @@ class App extends Component {
               <Route path="/Login" component={Login}></Route>
               <Route path="/MyProfile" component={AccueilPatient}></Route>
               <Route path ="/RendezVous" component={RendezvousComponent}></Route>
-              <Route path ="/ListeRendezVous" component={LissteRdvsComponent}></Route>
+              <Route path ="/rdv" component={LissteRdvsComponent}></Route>
               <Route path="/Profile" component={Profile}></Route>
+              <Route path ="/faq" component={Faq}></Route>
               </switch>
             </div>
             <FooterComponent/>
