@@ -20,7 +20,7 @@ class HeaderComponent extends Component {
                     
                     <div class="header-right">
                         
-                        <a href="#contact">Informations sur le vaccin</a>
+                        <a href="/vaccin">Informations sur le vaccin</a>
                         <a href="#about">F.A.Q</a>
                     </div>
                 

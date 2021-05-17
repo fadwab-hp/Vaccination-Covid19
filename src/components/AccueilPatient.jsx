@@ -45,7 +45,7 @@ import axios from 'axios';
           </div>
           <br></br>
           <div className="row  text-center">
-                <p> <a href=" ">Cliquez-içi pour :</a>  <strong>𝐃é𝐜𝐥𝐚𝐫𝐞𝐳 𝐮𝐧 𝐞𝐟𝐟𝐞𝐭 𝐢𝐧𝐝é𝐬𝐢𝐫𝐚𝐛𝐥𝐞</strong> </p>
+                <p> <a href="/effet">Cliquez-içi pour :</a>  <strong>𝐃é𝐜𝐥𝐚𝐫𝐞𝐳 𝐮𝐧 𝐞𝐟𝐟𝐞𝐭 𝐢𝐧𝐝é𝐬𝐢𝐫𝐚𝐛𝐥𝐞</strong> </p>
                 <br/><br/>
           </div>
           </div>
