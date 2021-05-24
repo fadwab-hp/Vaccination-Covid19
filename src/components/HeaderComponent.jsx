@@ -20,12 +20,21 @@ class HeaderComponent extends Component {
                     
                     <div class="header-right">
                         
-                        <a href="#contact">Informations sur le vaccin</a>
-                        <a href="/faq">F.A.Q</a>
+                        <a href="/editprofile">Profil</a>
+                        
                     </div>
-                
+                    
+                    <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul > 
+          <li><a class="nav-link scrollto " href="/Accueil">Home</a></li>
+          <li><a class="nav-link scrollto " href="/vaccin">Informations sur le vaccin</a></li>
+          <li><a class="nav-link scrollto " href="/faq">F.A.Q</a></li>
+          <li><a class="nav-link scrollto " href="/infos">Statistiques vaccination</a></li>
+          </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
                  </div>
-                 
+                
             </header>
             
             </div>

@@ -45,6 +45,10 @@ getPatientDetails(cin){
   return axios.get("http://localhost:8081/api/auth/detailsPatient/"+cin);
 }
 
+updateUser(users,cin){
+  return axios.put("http://localhost:8081/api/auth/User/" + cin,users);
+}
+
 }
 
 export default new AuthentificationService();

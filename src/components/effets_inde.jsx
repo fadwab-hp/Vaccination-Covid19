@@ -72,7 +72,7 @@ class effets extends Component {
               ).then(
                 response => {
                   this.setState({
-                    message: "Déclaration envoyer avec succès",
+                    message: "Déclaration envoyée avec succès",
                     successful: true
                     
                   });

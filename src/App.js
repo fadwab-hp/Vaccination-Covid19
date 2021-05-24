@@ -29,6 +29,7 @@ import editprofile from'./components/editprofile';
 import vaccin from './components/vaccinadopte'
 
 import Faq from './components/Faq';
+import InfoCampagne from './components/InfoCampagne';
 
 class App extends Component {
   render() {
@@ -36,7 +37,7 @@ class App extends Component {
       <div>
       <Router>
             <HeaderComponent/>
-            <br></br>
+            
              
             
             <div className ="container">
@@ -61,6 +62,7 @@ class App extends Component {
               <Route path ="/rdv" component={LissteRdvsComponent}></Route>
               <Route path="/Profile" component={Profile}></Route>
               <Route path ="/faq" component={Faq}></Route>
+              <Route path ="/infos" component ={InfoCampagne} ></Route>
               </switch>
             </div>
             <FooterComponent/>

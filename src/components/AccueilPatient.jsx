@@ -39,20 +39,12 @@ import axios from 'axios';
           <br></br>
           <br></br>
           <br></br>
-          <div className="row  text-center">
-                <p> <a href="/RendezVous ">Cliquez-içi pour :</a>  <strong>𝐏𝐫𝐞𝐧𝐝𝐫𝐞 𝐫𝐞𝐧𝐝𝐞𝐳-𝐯𝐨𝐮𝐬</strong> </p>
-                
-          </div>
+          <a href="/RendezVous" class="btn-get-started scrollto">Prendre un rendez-vous  </a>
           <br></br>
-          <div className="row  text-center">
-                <p> <a href="/effet">Cliquez-içi pour :</a>  <strong>𝐃é𝐜𝐥𝐚𝐫𝐞𝐳 𝐮𝐧 𝐞𝐟𝐟𝐞𝐭 𝐢𝐧𝐝é𝐬𝐢𝐫𝐚𝐛𝐥𝐞</strong> </p>
-                <br/><br/>
-          </div>
+          <a href="/effet" class="btn-get-started scrollto">Déclarer un effet indésirable</a>
           <br></br>
-          <div className="row  text-center">
-                <p> <a href="/MesRendezVous ">Cliquez-içi pour :</a>  <strong>Consulter vos rendez-vous</strong> </p>
-                <br/><br/>
-          </div>
+          <a href="/MesRendezVous" class="btn-get-started scrollto">Consulter vos rendez-vous   </a>
+          
           </div>
           </div> 
           </div> 

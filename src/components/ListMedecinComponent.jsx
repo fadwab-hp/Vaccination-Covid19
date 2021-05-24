@@ -46,6 +46,8 @@ class ListMedecinComponent extends Component {
 
     }
 
+    
+
     componentDidMount(){
         MedecinService.getMedecins().then((res) => {
             this.setState({ medecin: res.data});

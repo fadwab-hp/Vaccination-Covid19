@@ -40,7 +40,17 @@ class EditProfile extends Component {
       };
 
       
-      
+      updateUser = (e) => {
+        e.preventDefault();
+        let users ={nom: this.state.nom, prenom: this.state.prenom, email: this.state.email, adresse: this.state.adresse, ville: this.state.ville};
+        console.log('users => ' + JSON.stringify(users));
+        
+        AuthenticationService.updateUser(users,this.state.cin).then( res => {
+            this.props.history.push('/MyProfile');
+        });
+
+
+    }
       componentDidMount() {
         const user = AuthenticationService.getCurrentUser();
         this.setState({user: user});
@@ -59,6 +69,7 @@ class EditProfile extends Component {
               ville:response.data.ville,
               adresse:response.data.adresse,
               message: response.data.message,
+              
 
             })
        
@@ -145,6 +156,7 @@ class EditProfile extends Component {
                       autoComplete="cin"
                       onChange={this.changeHandler}
                       className="form-control"
+                      disabled
                     />
                    
                         </div>   
@@ -160,8 +172,10 @@ class EditProfile extends Component {
                       onChange={this.changeHandler}
                       className="form-control"
                     />
+                  
                    
                     </div>
+                    
             </div>
                      
     <br></br>
@@ -200,10 +214,14 @@ class EditProfile extends Component {
                         <input type="text"      onChange={this.changeHandler} name="adresse" value={this.state.adresse}  autoComplete="off" className="form-control"  required/>
     
                     </div>
-                    </div>
+            </div>
+            
+
+
+                    
 
     
-                <button type="submit"  className="btn btn-primary btn-lg btn-block sub">Modifier</button>
+                <button onClick = {this.updateUser} type="submit"  className="btn btn-primary btn-lg btn-block sub">Modifier</button>
                 
                   </form>
                   </div>
