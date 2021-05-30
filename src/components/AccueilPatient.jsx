@@ -44,6 +44,8 @@ import axios from 'axios';
           <a href="/effet" class="btn-get-started scrollto">Déclarer un effet indésirable</a>
           <br></br>
           <a href="/MesRendezVous" class="btn-get-started scrollto">Consulter vos rendez-vous   </a>
+          <br></br>
+          <a href="/certificat" class="btn-get-started scrollto">Imprimer mon certificat   </a>
           
           </div>
           </div> 

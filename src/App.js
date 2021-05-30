@@ -18,6 +18,7 @@ import CreatePatientComponent from './components/CreatePatientComponent';
 import FicheComponent from './components/FicheComponent'
 import Accueil from './components/Accueil';
 import Effet from './components/effets_inde';
+import Utilisateurs from './components/Utilisateurs';
 
 
 
@@ -30,6 +31,9 @@ import vaccin from './components/vaccinadopte'
 
 import Faq from './components/Faq';
 import InfoCampagne from './components/InfoCampagne';
+import UpdateUser from './components/UpdateUser';
+import essaisvaccin from './components/essaisvaccin';
+import Certificat from './components/Certificat';
 
 class App extends Component {
   render() {
@@ -63,6 +67,10 @@ class App extends Component {
               <Route path="/Profile" component={Profile}></Route>
               <Route path ="/faq" component={Faq}></Route>
               <Route path ="/infos" component ={InfoCampagne} ></Route>
+              <Route path="/utilisateurs" component={Utilisateurs}></Route>
+              <Route path = "/updateUser/:id" component = {UpdateUser} ></Route>
+              <Route path = "/essais" component = {essaisvaccin} ></Route>
+              <Route path = "/certificat" component = {Certificat} ></Route>
               </switch>
             </div>
             <FooterComponent/>

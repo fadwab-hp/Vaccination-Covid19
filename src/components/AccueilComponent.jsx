@@ -45,6 +45,14 @@ class AcceuilComponent extends Component {
     </div>
   </div>
 
+  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+    <div class="icon-box">
+        <div class="pic"><img src={patient1} class="img-fluid" alt=""></img></div>
+      <h4 className="couleur"><a href="/utilisateurs">Utilisateurs</a></h4>
+      <p className="couleur">Visualiser la liste des utilisateurs</p>
+    </div>
+  </div>
+
   <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
     <div class="icon-box">
       <div class="pic"><img src={statistique} class="img-fluid" alt=""></img></div>
